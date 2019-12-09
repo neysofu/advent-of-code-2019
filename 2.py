@@ -4,7 +4,13 @@ import sys
 
 
 def calculate_fuel_for_module(n):
-    return n // 3 - 2
+    total = 0
+    while True:
+        n = n // 3 - 2
+        if n <= 0:
+            break
+        total += n
+    return total
 
 
 f = open(sys.argv[1], "r").read()
